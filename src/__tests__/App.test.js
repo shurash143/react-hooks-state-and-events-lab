@@ -4,11 +4,13 @@ import App from "../components/App";
 
 test("displays in 'light' mode when initialized", () => {
   const { container } = render(<App />);
+  
   expect(container.querySelector(".App.light")).toBeInTheDocument();
 });
 
 test("changes to 'dark' mode when the button is clicked", () => {
   const { container } = render(<App />);
+    
   expect(container.querySelector(".App.light")).toBeInTheDocument();
 
   fireEvent.click(screen.getByText(/ Mode/));
